@@ -13,6 +13,8 @@ If you are using MacOS and homebrew, just run
 brew install boost
 ```
 
+Or you can just download the file from [the boost official page](http://www.boost.org/) since we need header files only.
+
 This code is parallelized using OpenMP. Since the default compiler on MacOSX (clang) does not support OpenMP, you need to install gcc.
 
 ```
@@ -20,7 +22,7 @@ brew tap homebrew/versions
 brew install gcc5
 ```
 
-If you install boost in a different way, just specify the path of the boost when building.
+If you install boost in a different way, just specify the path of the boost when building. If you are using Linux, just use the default gcc.
 
 To compile, just run `make`. To specify the compile command and include path, use `CXX` and `INCLUDE` environment varialbles.
 If you would like to configure compile option, set `OPT`.
@@ -30,7 +32,7 @@ The following is an example.
 env CXX=g++-5 INCLUDE=-I/usr/local/include make
 ```
 
-Since the makefile is very simple, you can edit it by yourself if you had a trouble.
+Since the makefile is very simple, you can edit it by yourself if you encountered a trouble.
 
 # Running
 
