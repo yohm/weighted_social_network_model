@@ -22,10 +22,12 @@ brew install gcc5
 
 If you install boost in a different way, just specify the path of the boost when building.
 
-To compile, just run `make`. If you need to specify the path of the boost library, set `BOOST_PATH` environment variable like
+To compile, just run `make`. To specify the compile command and include path, use `CXX` and `INCLUDE` environment varialbles.
+If you would like to configure compile option, set `OPT`.
+The following is an example.
 
 ```
-BOOST_PATH=/usr/local/include make
+env CXX=g++-5 INCLUDE=-I/usr/local/include make
 ```
 
 Since the makefile is very simple, you can edit it by yourself if you had a trouble.
